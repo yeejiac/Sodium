@@ -1,0 +1,6 @@
+language: c++
+env:
+  global:
+    - secure: ${GITHUB_TOKEN}
+  matrix:
+    - TRAVIS_EMPTY_JOB_WORKAROUND=true
