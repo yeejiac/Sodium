@@ -4,8 +4,8 @@ LIBPATH=./lib/
 
 LIB=-lcurl -lpthread -ljsoncpp
 SELF_LIB = -libcommon.so
-DEBUG=-DDEBUG -g
-CXX=-std=c++11 -Wall
+DEBUG=-DDEBUG -g -w
+CXX=-std=c++11
 OFILE=$(wildcard $(LIBPATH)*.o)
 
 CXXFILE=main.cpp
@@ -21,3 +21,12 @@ FORMAL_OUTPUT = -o formal.out
 test: $(TEST_OUTPUT)
 		g++ $(DEBUG) $(CXXFILE) $(INC) \
 		$(CXX) $(TEST_OUTPUT)
+
+main: $(CXXFILE)
+		g++ $(DEBUG) $(CXXFILE) $(INC) \
+		$(CXX) $(TEST_OUTPUT)
+
+# mainsocket: $(CXXFILE)
+# 	g++ $(CXXFILE) $(SERVER) $(CLIENT) \
+# 	$(CXX) $(TARGET) $(CFLAGS)
+		
