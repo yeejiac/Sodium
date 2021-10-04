@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "logwriter.h": "c",
+        "timecounter.h": "c"
+    }
+}
