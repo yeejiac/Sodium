@@ -2949,10 +2949,14 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_Logwriter swig_types[0]
-#define SWIGTYPE_p_char swig_types[1]
-static swig_type_info *swig_types[3];
-static swig_module_info swig_module = {swig_types, 2, 0, 0, 0, 0};
+#define SWIGTYPE_p_InitParser swig_types[0]
+#define SWIGTYPE_p_Logwriter swig_types[1]
+#define SWIGTYPE_p_TimeCounter swig_types[2]
+#define SWIGTYPE_p_char swig_types[3]
+#define SWIGTYPE_p_clock_t swig_types[4]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[5]
+static swig_type_info *swig_types[7];
+static swig_module_info swig_module = {swig_types, 6, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3485,6 +3489,366 @@ SWIGINTERN PyObject *Logwriter_swigregister(PyObject *SWIGUNUSEDPARM(self), PyOb
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_new_InitParser(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::string arg1 ;
+  std::string arg2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  InitParser *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_InitParser",&obj0,&obj1)) SWIG_fail;
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj0, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_InitParser" "', argument " "1"" of type '" "std::string""'"); 
+    }
+    arg1 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj1, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_InitParser" "', argument " "2"" of type '" "std::string""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (InitParser *)new InitParser(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_InitParser, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InitParser_findLine(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  InitParser *arg1 = (InitParser *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:InitParser_findLine",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_InitParser, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InitParser_findLine" "', argument " "1"" of type '" "InitParser *""'"); 
+  }
+  arg1 = reinterpret_cast< InitParser * >(argp1);
+  (arg1)->findLine();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InitParser_readLine(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  InitParser *arg1 = (InitParser *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:InitParser_readLine",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_InitParser, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InitParser_readLine" "', argument " "1"" of type '" "InitParser *""'"); 
+  }
+  arg1 = reinterpret_cast< InitParser * >(argp1);
+  (arg1)->readLine();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InitParser_iniContainer_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  InitParser *arg1 = (InitParser *) 0 ;
+  std::map< std::string,std::string > *arg2 = (std::map< std::string,std::string > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:InitParser_iniContainer_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_InitParser, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InitParser_iniContainer_set" "', argument " "1"" of type '" "InitParser *""'"); 
+  }
+  arg1 = reinterpret_cast< InitParser * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__mapT_std__string_std__string_t, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InitParser_iniContainer_set" "', argument " "2"" of type '" "std::map< std::string,std::string > *""'"); 
+  }
+  arg2 = reinterpret_cast< std::map< std::string,std::string > * >(argp2);
+  if (arg1) (arg1)->iniContainer = *arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InitParser_iniContainer_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  InitParser *arg1 = (InitParser *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::map< std::string,std::string > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:InitParser_iniContainer_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_InitParser, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InitParser_iniContainer_get" "', argument " "1"" of type '" "InitParser *""'"); 
+  }
+  arg1 = reinterpret_cast< InitParser * >(argp1);
+  result = (std::map< std::string,std::string > *)& ((arg1)->iniContainer);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__mapT_std__string_std__string_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_InitParser(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  InitParser *arg1 = (InitParser *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_InitParser",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_InitParser, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_InitParser" "', argument " "1"" of type '" "InitParser *""'"); 
+  }
+  arg1 = reinterpret_cast< InitParser * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *InitParser_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_InitParser, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_TimeCounter_timeStart(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TimeCounter *arg1 = (TimeCounter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TimeCounter_timeStart",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TimeCounter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TimeCounter_timeStart" "', argument " "1"" of type '" "TimeCounter *""'"); 
+  }
+  arg1 = reinterpret_cast< TimeCounter * >(argp1);
+  (arg1)->timeStart();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TimeCounter_zawarudo(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TimeCounter *arg1 = (TimeCounter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TimeCounter_zawarudo",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TimeCounter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TimeCounter_zawarudo" "', argument " "1"" of type '" "TimeCounter *""'"); 
+  }
+  arg1 = reinterpret_cast< TimeCounter * >(argp1);
+  (arg1)->zawarudo();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TimeCounter_start_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TimeCounter *arg1 = (TimeCounter *) 0 ;
+  clock_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TimeCounter_start_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TimeCounter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TimeCounter_start_set" "', argument " "1"" of type '" "TimeCounter *""'"); 
+  }
+  arg1 = reinterpret_cast< TimeCounter * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_clock_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TimeCounter_start_set" "', argument " "2"" of type '" "clock_t""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TimeCounter_start_set" "', argument " "2"" of type '" "clock_t""'");
+    } else {
+      clock_t * temp = reinterpret_cast< clock_t * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->start = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TimeCounter_start_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TimeCounter *arg1 = (TimeCounter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  clock_t result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TimeCounter_start_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TimeCounter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TimeCounter_start_get" "', argument " "1"" of type '" "TimeCounter *""'"); 
+  }
+  arg1 = reinterpret_cast< TimeCounter * >(argp1);
+  result =  ((arg1)->start);
+  resultobj = SWIG_NewPointerObj((new clock_t(static_cast< const clock_t& >(result))), SWIGTYPE_p_clock_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TimeCounter_end_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TimeCounter *arg1 = (TimeCounter *) 0 ;
+  clock_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TimeCounter_end_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TimeCounter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TimeCounter_end_set" "', argument " "1"" of type '" "TimeCounter *""'"); 
+  }
+  arg1 = reinterpret_cast< TimeCounter * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_clock_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TimeCounter_end_set" "', argument " "2"" of type '" "clock_t""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TimeCounter_end_set" "', argument " "2"" of type '" "clock_t""'");
+    } else {
+      clock_t * temp = reinterpret_cast< clock_t * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->end = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TimeCounter_end_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TimeCounter *arg1 = (TimeCounter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  clock_t result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TimeCounter_end_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TimeCounter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TimeCounter_end_get" "', argument " "1"" of type '" "TimeCounter *""'"); 
+  }
+  arg1 = reinterpret_cast< TimeCounter * >(argp1);
+  result =  ((arg1)->end);
+  resultobj = SWIG_NewPointerObj((new clock_t(static_cast< const clock_t& >(result))), SWIGTYPE_p_clock_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TimeCounter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TimeCounter *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_TimeCounter")) SWIG_fail;
+  result = (TimeCounter *)new TimeCounter();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TimeCounter, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_TimeCounter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TimeCounter *arg1 = (TimeCounter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_TimeCounter",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TimeCounter, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TimeCounter" "', argument " "1"" of type '" "TimeCounter *""'"); 
+  }
+  arg1 = reinterpret_cast< TimeCounter * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *TimeCounter_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_TimeCounter, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"new_Logwriter", _wrap_new_Logwriter, METH_VARARGS, NULL},
@@ -3492,26 +3856,58 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Logwriter_getTime", _wrap_Logwriter_getTime, METH_VARARGS, NULL},
 	 { (char *)"delete_Logwriter", _wrap_delete_Logwriter, METH_VARARGS, NULL},
 	 { (char *)"Logwriter_swigregister", Logwriter_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_InitParser", _wrap_new_InitParser, METH_VARARGS, NULL},
+	 { (char *)"InitParser_findLine", _wrap_InitParser_findLine, METH_VARARGS, NULL},
+	 { (char *)"InitParser_readLine", _wrap_InitParser_readLine, METH_VARARGS, NULL},
+	 { (char *)"InitParser_iniContainer_set", _wrap_InitParser_iniContainer_set, METH_VARARGS, NULL},
+	 { (char *)"InitParser_iniContainer_get", _wrap_InitParser_iniContainer_get, METH_VARARGS, NULL},
+	 { (char *)"delete_InitParser", _wrap_delete_InitParser, METH_VARARGS, NULL},
+	 { (char *)"InitParser_swigregister", InitParser_swigregister, METH_VARARGS, NULL},
+	 { (char *)"TimeCounter_timeStart", _wrap_TimeCounter_timeStart, METH_VARARGS, NULL},
+	 { (char *)"TimeCounter_zawarudo", _wrap_TimeCounter_zawarudo, METH_VARARGS, NULL},
+	 { (char *)"TimeCounter_start_set", _wrap_TimeCounter_start_set, METH_VARARGS, NULL},
+	 { (char *)"TimeCounter_start_get", _wrap_TimeCounter_start_get, METH_VARARGS, NULL},
+	 { (char *)"TimeCounter_end_set", _wrap_TimeCounter_end_set, METH_VARARGS, NULL},
+	 { (char *)"TimeCounter_end_get", _wrap_TimeCounter_end_get, METH_VARARGS, NULL},
+	 { (char *)"new_TimeCounter", _wrap_new_TimeCounter, METH_VARARGS, NULL},
+	 { (char *)"delete_TimeCounter", _wrap_delete_TimeCounter, METH_VARARGS, NULL},
+	 { (char *)"TimeCounter_swigregister", TimeCounter_swigregister, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static swig_type_info _swigt__p_InitParser = {"_p_InitParser", "InitParser *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Logwriter = {"_p_Logwriter", "Logwriter *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_TimeCounter = {"_p_TimeCounter", "TimeCounter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_clock_t = {"_p_clock_t", "clock_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__mapT_std__string_std__string_t = {"_p_std__mapT_std__string_std__string_t", "std::map< std::string,std::string > *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
+  &_swigt__p_InitParser,
   &_swigt__p_Logwriter,
+  &_swigt__p_TimeCounter,
   &_swigt__p_char,
+  &_swigt__p_clock_t,
+  &_swigt__p_std__mapT_std__string_std__string_t,
 };
 
+static swig_cast_info _swigc__p_InitParser[] = {  {&_swigt__p_InitParser, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Logwriter[] = {  {&_swigt__p_Logwriter, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TimeCounter[] = {  {&_swigt__p_TimeCounter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_clock_t[] = {  {&_swigt__p_clock_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__mapT_std__string_std__string_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
+  _swigc__p_InitParser,
   _swigc__p_Logwriter,
+  _swigc__p_TimeCounter,
   _swigc__p_char,
+  _swigc__p_clock_t,
+  _swigc__p_std__mapT_std__string_std__string_t,
 };
 
 

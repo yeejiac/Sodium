@@ -8,5 +8,5 @@
 %}
 
 %include "logwriter.h"
-#include "initParser.h"
-#include "timeCounter.h"
+%include "initParser.h"
+%include "timeCounter.h"
