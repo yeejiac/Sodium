@@ -1,32 +1,11 @@
-language: c++
-
-matrix:
-  include:
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-4.9
-      env:
-         - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
-env:
-  global:
-    - secure: ${GITHUB_TOKEN}
-  matrix:
-    - TRAVIS_EMPTY_JOB_WORKAROUND=true
-
-notifications:
-  email: false    # default notification method
-  slack:
-    rooms:
-      - secure: 4AyfJ6YEPHEVl4JnEnShaeEv
-    on_success: always  # change: send a notification when the build status changes.
-    on_failure: always  # always: always send a notification.
-    template:
-      - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
-      - "Execution time: *%{duration}*"
-      - "Message: %{message}"
-
-script: make main
+language: python
+python:
+  - "3.6"      # current default Python on Travis CI
+  - "3.7"
+  - "3.8"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+# command to run tests
+script:
+  - python3 ./lib/unittest.py
