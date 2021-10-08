@@ -8,4 +8,4 @@ python:
 #   - pip install -r requirements.txt
 # command to run tests
 script:
-  - python3 ./lib/unittest.py
+  - python ./test/unittest.py
